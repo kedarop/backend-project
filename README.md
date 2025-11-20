@@ -1,80 +1,39 @@
-# Node.js Express CRUD API (Customer & Employee)
+# Simple Express.js CRUD App
 
-This is a simple beginner‑friendly **Node.js + Express.js + MongoDB** project that contains two tables:
+This is a very basic Node.js + Express.js project I made to practice backend and MongoDB.
+It has two collections:
 
-* **Customer**
-* **Employee**
+* Customer
+* Employee
 
-For both tables, full **CRUD operations** are implemented:
+Each one has basic CRUD (Create, Read, Update, Delete) APIs.
 
-* **GET** – Fetch all data or a single record
-* **POST** – Add a new record
-* **PUT** – Update an existing record
-* **DELETE** – Remove a record
+---
 
-## 🚀 Tech Stack
+##  API Endpoints
 
-* Node.js
-* Express.js
-* MongoDB Atlas
-* Mongoose (for schema + database operations)
+### Customer
 
-## 📁 Project Structure
+* POST    /customers
+* GET     /customers
+* GET     /customers/:id
+* PUT     /customers/:id
+* DELETE  /customers/:id
 
+### Employee
+
+* POST    /employees
+* GET     /employees
+* GET     /employees/:id
+* PUT     /employees/:id
+* DELETE  /employees/:id
+
+---
+
+COMMANDS -
 ```
-backend-project/
-│   server.js
-│   package.json
-│
-├── models/
-│   ├── Customer.js
-│   └── Employee.js
-│
-└── routes/
-    ├── customerRoutes.js
-    └── employeeRoutes.js
-```
-
-## 🔌 API Endpoints
-
-### Customer Routes
-
-| Method | Endpoint         | Description         |
-| ------ | ---------------- | ------------------- |
-| POST   | `/customers`     | Create a customer   |
-| GET    | `/customers`     | Get all customers   |
-| GET    | `/customers/:id` | Get single customer |
-| PUT    | `/customers/:id` | Update customer     |
-| DELETE | `/customers/:id` | Delete customer     |
-
-### Employee Routes
-
-| Method | Endpoint         | Description         |
-| ------ | ---------------- | ------------------- |
-| POST   | `/employees`     | Create an employee  |
-| GET    | `/employees`     | Get all employees   |
-| GET    | `/employees/:id` | Get single employee |
-| PUT    | `/employees/:id` | Update employee     |
-| DELETE | `/employees/:id` | Delete employee     |
-
-## 🗄 MongoDB Connection
-
-Uses MongoDB Atlas connection string inside `server.js`.
-The database and collections are created automatically when data is added.
-
-## ▶️ How to Run
-
-```bash
 npm install
 npm run dev
 ```
 
-Server runs on: `http://localhost:3000`
-
-## 🧪 Testing API
-
-Use **Postman** or **Thunder Client** to test POST, GET, PUT, DELETE requests.
-
-## ✔️ Summary
-
-This project demonstrates a clean and simple Express API with two collections, each supporting full CRUD. Ideal for basic backend learning or assignment submission.
+Then you can test the APIs using Postman or Thunder Client.
